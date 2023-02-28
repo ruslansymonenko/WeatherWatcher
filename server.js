@@ -12,7 +12,7 @@ app.use(express.static(__dirname + '/assets'));
 app.get('/weather', (req, res) => {
   const API_KEY = process.env.API_KEY;
 
-  fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=Kiev&aqi=no`)
+  fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=Kiev&days=7&aqi=no&alerts=no`)
     .then(response => response.json())
     .then(data => {
       res.send(data);

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather watcher</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -14,19 +17,122 @@
   <div class="app">
     <div class="container">
       <header class="header">
+        <h1 class="app-title">
+          Weather Watcher
+        </h1>
+        <div class="weather">
+          <div class="location-info">
+            <img class="location-info__img" src="//cdn.weatherapi.com/weather/64x64/night/113.png" alt="weather img">
+            <h2 class="location-info__city">
+              Kyiv
+            </h2>
+            <h3 class="location-info__country">
+              Ukraine
+            </h3>
+            <p class="location-info__temperature">
+              4 C
+            </p>
 
+            <button class="location-info__btn">
+              <img src="./img/location-icon.png" alt="location">
+              <span>Change location</span>
+            </button>
+          </div>
+          <div class="weather-info">
+            <ul class="weather-info__list">
+              <li class="weather-info__list-item">
+                <img class="weather-item__img" src="./img/humidity-icon.png" alt="">
+                <div class="weather-item__text">
+                  <span class="weather-item__desc">Humidity</span>
+                  <span class="weather-item__value">53%</span>
+                </div>
+              </li>
+              <li class="weather-info__list-item">
+                <img class="weather-item__img" src="./img/cloud-ressure.png" alt="">
+                <div class="weather-item__text">
+                  <span class="weather-item__desc">Air pressure</span>
+                  <span class="weather-item__value">1026.0</span>
+                </div>
+              </li>
+              <li class="weather-info__list-item">
+                <img class="weather-item__img" src="./img/wind_icon.png" alt="">
+                <div class="weather-item__text">
+                  <span class="weather-item__desc">Wind Speed</span>
+                  <span class="weather-item__value">8.1 mph</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </header>
       <footer class="footer">
-        <ul class="weather-days">
-          <li class="weather-day">
-
+        <ul class="weather-hours">
+          <li class="weather-hour" data-time="3am">
+            <h4 class="weather-hour__hour-value">
+              3AM
+            </h4>
+            <p class="weather-hour__temperature">
+              0 C
+            </p>
+            <p class="weather-hour__temperature-feels">
+              Feels like 0.9 C
+            </p>
           </li>
-          <li class="weather-day"></li>
-          <li class="weather-day"></li>
-          <li class="weather-day"></li>
-          <li class="weather-day"></li>
-          <li class="weather-day"></li>
-          <li class="weather-day"></li>
+          <li class="weather-hour" data-time="6am">
+            <h4 class="weather-hour__hour-value">
+              3AM
+            </h4>
+            <p class="weather-hour__temperature">
+              0 C
+            </p>
+            <p class="weather-hour__temperature-feels">
+              Feels like 0.9 C
+            </p>
+          </li>
+          <li class="weather-hour" data-time="11am">
+            <h4 class="weather-hour__hour-value">
+              3AM
+            </h4>
+            <p class="weather-hour__temperature">
+              0 C
+            </p>
+            <p class="weather-hour__temperature-feels">
+              Feels like 0.9 C
+            </p>
+          </li>
+          <li class="weather-hour" data-time="3pm">
+            <h4 class="weather-hour__hour-value">
+              3AM
+            </h4>
+            <p class="weather-hour__temperature">
+              0 C
+            </p>
+            <p class="weather-hour__temperature-feels">
+              Feels like 0.9 C
+            </p>
+          </li>
+          <li class="weather-hour" data-time="6pm">
+            <h4 class="weather-hour__hour-value">
+              3AM
+            </h4>
+            <p class="weather-hour__temperature">
+              0 C
+            </p>
+            <p class="weather-hour__temperature-feels">
+              Feels like 0.9 C
+            </p>
+          </li>
+          <li class="weather-hour" data-time="11pm">
+            <h4 class="weather-hour__hour-value">
+              3AM
+            </h4>
+            <p class="weather-hour__temperature">
+              0 C
+            </p>
+            <p class="weather-hour__temperature-feels">
+              Feels like 0.9 C
+            </p>
+          </li>
         </ul>
       </footer>
     </div>
