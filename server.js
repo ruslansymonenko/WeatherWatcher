@@ -16,7 +16,7 @@ app.post('/weather', (req, res) => {
 
   const API_KEY = process.env.API_KEY;
 
-  fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityData.city}&days=7&aqi=no&alerts=no`)
+  fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityData.city}&days=1&aqi=no&alerts=no`)
     .then(response => response.json())
     .then(data => {
       res.send(data);
