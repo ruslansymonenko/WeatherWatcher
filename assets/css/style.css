@@ -56,6 +56,10 @@ color: inherit;
   font-family: 'Roboto Mono', monospace;
 }
 
+:root{
+  --bg-image: url('../img/bg-1.jpg');
+}
+
 body {
   position: relative;
   width: 100%;
@@ -71,12 +75,13 @@ body {
   min-height: 100vh;
   min-width: 100%;
   position: absolute;
-  background: url('../img/bg-1.jpg');
+  background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.8;
   filter: brightness(60%);
+  transition: 1s ease;
   z-index: 1;
 }
 

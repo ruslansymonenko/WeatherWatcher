@@ -95,6 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.remove('modal--active');
   }
 
+  function changeBg () {
+    const bgImages = ['../img/bg-1.jpg', '../img/bg-2.jpg', '../img/bg-3.jpg', '../img/bg-4.jpg', '../img/bg-5.jpg'];
+    const randomBgImage = bgImages[Math.floor(Math.random() * bgImages.length)];
+
+    document.documentElement.style.setProperty("--bg-image", `url(${randomBgImage})`);
+  }
+
   locationBtn.addEventListener('click', () => {
     showModal();
   })
@@ -112,4 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   showWeather(currentCity);
+
+  setInterval(changeBg, 30000);
 });
