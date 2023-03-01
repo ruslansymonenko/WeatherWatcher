@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.querySelector('.modal');
+  const locationBtn = document.querySelector('.location-info__btn');
+  const closeModalBtn = document.querySelector('.close-modal__btn');
+  const bgHide = document.querySelector('._bg-hide');
+  const modalCities = document.querySelectorAll('.modal-city__list-item');
 
-  let currentCity = {city: 'London'};
+  let currentCity = {city: 'Kiev'};
 
   async function getWeather(cityData) {
     try {
@@ -36,5 +41,30 @@ document.addEventListener('DOMContentLoaded', () => {
     windSpeed.textContent = `${weatherData.current.wind_kph} kph`;
   }
 
+  function showModal () {
+    bgHide.classList.add('_bg-hide--active');
+    modal.classList.add('modal--active');
+  }
+
+  function closeModal() {
+    bgHide.classList.remove('_bg-hide--active');
+    modal.classList.remove('modal--active');
+  }
+
+  locationBtn.addEventListener('click', () => {
+    showModal();
+  })
+
+  closeModalBtn.addEventListener('click', () => {
+    closeModal();
+  })
+
+  modalCities.forEach(item => {
+    item.addEventListener('click', () => {
+      currentCity.city = item.textContent;
+      showWeather(currentCity);
+      closeModal();
+    })
+  })
   showWeather(currentCity);
 });
